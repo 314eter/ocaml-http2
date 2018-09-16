@@ -1,0 +1,18 @@
+opam-version: "1.2"
+maintainer: "Pieter Goetschalckx <3.14.e.ter@gmail.com>"
+authors: ["Pieter Goetschalckx <3.14.e.ter@gmail.com>"]
+homepage: "https://github.com/314eter/ocaml-http2"
+license: "MIT"
+dev-repo: "https://github.com/314eter/ocaml-http2.git"
+bug-reports: "https://github.com/314eter/ocaml-http2/issues"
+available: [ ocaml-version >= "4.07.0"]
+depends: [
+  "dune" {build}
+  "hpack"
+  "lwt"
+  "lwt_ppx"
+]
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+build-test: [["dune" "runtest" "-p" name "-j" jobs]]

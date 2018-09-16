@@ -1,0 +1,5 @@
+(library
+  (public_name http2)
+  (modules s util flags priority frame hpack_io stream connection)
+  (libraries hpack)
+  (preprocess (pps ppx_let)))
